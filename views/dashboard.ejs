@@ -1,0 +1,58 @@
+<style>
+    #button {
+        margin-bottom: -10px;
+    }
+
+    hr {
+        border-width: 2px;
+        border-color: grey;
+    }
+   
+</style>  
+
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-2">Welcome <%= user.name %></p>
+<a href="/users/logout" class="btn btn-secondary" id="button">Logout</a>
+
+<hr>
+
+<div class="main">
+    <div class="proficiency-head">
+        <h4>Language proficiency</h4>
+    </div>
+
+    <div class="proficiency">
+        <div class="form-group col-md-4">
+            <label for="inputState">HTML</label>
+            <select id="inputState" class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+        </div>    
+    </div>
+</div>
+
+
+<a href="/save?email=<%= user.email%>&html=" class="btn btn-secondary" id="button1">Submit</a>
+
+<script>
+    var e = document.getElementById("inputState");
+    e.addEventListener("click", function(){
+        var strUser = e.options[e.selectedIndex].text ;
+        console.log(strUser);
+
+        var link = document.getElementById("button1");
+        link.setAttribute("href", "/save?email=<%= user.email%>&html="+strUser);
+        console.log(link.href);
+    });
+</script>
+
+
