@@ -2,6 +2,8 @@
 
 The following webapplication containes the login/register page with passport authentication. Further more on login it shows the dashboard and can compare user language proficiency with other users. The data for the following application is stored in MongoDB Atlas cloud platform.
 
+Application can be viewed at - https://register-login-dashboard.herokuapp.com
+
 Technologies/language/software/framework used -
 - 1- Node.js
 - 2- HTML, CSS, Javascript, Bootstrap
